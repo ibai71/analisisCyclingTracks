@@ -2,13 +2,13 @@
 public class AnalisisLogTrack {
 	public final static double RADIO_TIERRA_KM = 6371;
 	
-	
+	//comentario de Ander
 	/**
-	 * Obtiene las estadísticas básicas de la actividad realizada
+	 * Obtiene las estadÃ­sticas bÃ¡sicas de la actividad realizada
 	 * 
 	 * @param pInfo
-	 *            información de la actividad (track) del atleta
-	 * @return las estadísticas basicas de duracion, velocidad media y distancia total de la actividad
+	 *            informaciÃ³n de la actividad (track) del atleta
+	 * @return las estadÃ­sticas basicas de duracion, velocidad media y distancia total de la actividad
 	 */
 	public static EstadisticasBasicas obtEstadisticasBasicas(InfoLogTrack pInfo) {
 		//LEXICO
@@ -89,13 +89,13 @@ public class AnalisisLogTrack {
 	}
 
     /**
-     * Genera y guarda el gráfico que muestra el perfil de la actividad junto con 
-     * la evolución de la frecuencia cardíaca.
+     * Genera y guarda el grÃ¡fico que muestra el perfil de la actividad junto con 
+     * la evoluciÃ³n de la frecuencia cardÃ­aca.
      * 
      * @param pInfo
-     * 			Información de la actividad (track) del atleta
+     * 			InformaciÃ³n de la actividad (track) del atleta
      * @param pFichero
-     * 			Nombre (path) del fichero donde se guardará el gráfico generado
+     * 			Nombre (path) del fichero donde se guardarÃ¡ el grÃ¡fico generado
      */
     public static void graficarPerfil(InfoLogTrack pInfo, String pFichero) {
     	int i, numRegistros; //LEXICO
@@ -135,7 +135,7 @@ public class AnalisisLogTrack {
      * Devuelve la distribucion por zonas de la frecuencia cardiaca
      * 
      * @param pInfo
-     *         Información de la actividad (track) del atleta
+     *         InformaciÃ³n de la actividad (track) del atleta
      * @return lista de enteros indicando en cada posicion la distribucion de la FR
      */
     public static double[] obtDistribucionRC(InfoLogTrack pInfo) {
@@ -191,14 +191,14 @@ public class AnalisisLogTrack {
 
     
     /**
-     * Calcula el consumo de calorías del ciclista durante su actividad basandose 
-     * en el método Metabolic Equivalent Task (MET).
+     * Calcula el consumo de calorÃ­as del ciclista durante su actividad basandose 
+     * en el mÃ©todo Metabolic Equivalent Task (MET).
      * 
      * @param pInfo
-     * 		Información de la actividad (track) del atleta.
+     * 		InformaciÃ³n de la actividad (track) del atleta.
      * @param pKg
      * 		Peso corporal del atletam en kilogramos.
-     * @return Las calorías consumidas en la actividad. 
+     * @return Las calorÃ­as consumidas en la actividad. 
      */
     public static double estimarConsumoCalorias(InfoLogTrack pInfo, double pKg) {
     	int i;
@@ -227,14 +227,14 @@ public class AnalisisLogTrack {
 	
 	
 	/**
-	 * Obtiene las estadísticas avanzadas de la actividad realizada
+	 * Obtiene las estadÃ­sticas avanzadas de la actividad realizada
 	 * 
 	 * @param pInfo
 	 * 			informacion de la actividad del atleta
 	 * @param pKg
 	 * 			peso corporal del atleta
-	 * @return la estadisticas avanzadas que incluyen velocidad máxima, 
-	 * 			km más rápido, consumo calórico y desnivel positivo
+	 * @return la estadisticas avanzadas que incluyen velocidad mÃ¡xima, 
+	 * 			km mÃ¡s rÃ¡pido, consumo calÃ³rico y desnivel positivo
 	 */
 	public static EstadisticasAvanzadas obtEstadisticasAvanzadas(InfoLogTrack pInfo, double pKg) {
 		
@@ -309,7 +309,7 @@ public class AnalisisLogTrack {
             lat2 = Math.toRadians(pInfo.latitud[i+1]);
             long1 = Math.toRadians(pInfo.longitud[i]);
             long2 = Math.toRadians(pInfo.longitud[i+1]);
-            //c�lculos 
+            //cálculos 
             dist = obtenerDistancia(lat1, lat2, long1, long2);
             distTotal = distTotal + dist;
             if(distTotal >= 1) {
@@ -369,7 +369,7 @@ public class AnalisisLogTrack {
 	                System.out.println("velocidad maxima: "+truncar(resultado4.velocidadMaxima,2)+"km/h");
 	                System.out.println("desnivel: "+truncar(resultado4.desnivel,2)+"m");
 	                System.out.println("km mas rapido: "+truncar(resultado4.velocidadMaxKm,2)+"km/h");
-	                System.out.println("Distribuci�n de zonas FC:");
+	                System.out.println("Distribución de zonas FC:");
 	                
 	                resultado2 = AnalisisLogTrack.obtDistribucionRC(info);
 	                System.out.println("Z1 (resistencia): "+truncar(resultado2[0],2)+"%");
