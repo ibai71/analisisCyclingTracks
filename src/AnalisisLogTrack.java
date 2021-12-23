@@ -2,7 +2,6 @@
 public class AnalisisLogTrack {
 	public final static double RADIO_TIERRA_KM = 6371;
 	
-	//comentario de Ander
 	/**
 	 * Obtiene las estadÃ­sticas bÃ¡sicas de la actividad realizada
 	 * 
